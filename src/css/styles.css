@@ -23,3 +23,50 @@
   -moz-osx-font-smoothing: grayscale;
   -webkit-text-size-adjust: 100%;
 }
+.gallery-item {
+  position: relative;
+  width: 360px;
+  height: 200px;
+  overflow: hidden;
+  border: 1px solid #808080;
+}
+
+.gallery-img {
+  width: 360px;
+  height: 200px;
+}
+
+.gallery-section {
+  position: absolute;
+  bottom: 0;
+  width: 360px;
+  height: 48px;
+  background: #fff;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+.gallery-text {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  font: 600 12px / 1.33333 'Montserrat', sans-serif;
+  letter-spacing: 0.04em;
+  color: #2e2f42;
+}
+
+.value {
+  font: 400 12px / 2 'Montserrat', sans-serif;
+  letter-spacing: 0.04em;
+  color: #2e2f42;
+}
+.gallery {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 24px;
+  margin-top: 108px;
+  margin-bottom: 20px;
+}

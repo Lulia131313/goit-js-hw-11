@@ -5,6 +5,9 @@ export function getPhotos(q) {
   const params = new URLSearchParams({
     key: API_KEY,
     q,
+    image_type: 'photo',
+    orientation: 'horizontal',
+    safesearch: true,
   });
   return fetch(`${BASE_URL}/?${params}`).then(res => {
     if (!res.ok) {
