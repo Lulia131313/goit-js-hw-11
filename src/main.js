@@ -14,6 +14,8 @@ const ulEl = document.querySelector('.js-gallery');
 const ulForm = document.querySelector('.js-search-form');
 const loader = document.querySelector('.loader');
 
+ulForm.addEventListener('submit', onFormSubmit);
+
 function showLoader() {
   loader.classList.remove('is-hidden');
 }
@@ -21,8 +23,6 @@ function showLoader() {
 function hideLoader() {
   loader.classList.add('is-hidden');
 }
-
-ulForm.addEventListener('submit', onFormSubmit);
 
 function onFormSubmit(e) {
   e.preventDefault();
