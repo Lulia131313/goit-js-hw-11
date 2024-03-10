@@ -8,6 +8,7 @@ import SimpleLightbox from 'simplelightbox';
 import 'simplelightbox/dist/simple-lightbox.min.css';
 
 import { getPhotos } from './js/pixabay-api';
+
 import { createMarkup } from './js/render-functions';
 
 const ulEl = document.querySelector('.js-gallery');
