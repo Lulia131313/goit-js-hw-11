@@ -28,6 +28,7 @@ function onFormSubmit(e) {
   e.preventDefault();
 
   ulEl.innerHTML = '';
+
   showLoader();
 
   const input = e.currentTarget.elements['user-search-query'].value.trim();
@@ -47,6 +48,7 @@ function onFormSubmit(e) {
     })
     .catch(console.log)
     .finally(() => hideLoader());
+
   e.currentTarget.reset();
 }
 
