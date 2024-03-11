@@ -34,16 +34,23 @@ function onFormSubmit(e) {
 
   const input = e.currentTarget.elements['user-search-query'].value.trim();
 
-  if (!input) return alert('Error');
+  if (!input) {
+    hideLoader();
+    return iziToast.error({
+      title: 'Error',
+      message: 'error',
+    });
+  }
 
   getPhotos(input)
     .then(res => {
-      if (res.hits.length === 0)
+      if (res.hits.length === 0) {
         return iziToast.error({
           title: 'Error',
           message:
             'Sorry, there are no images matching your search query. Please try again!',
         });
+      }
       ulEl.innerHTML = createMarkup(res.hits);
       lightbox.refresh();
     })
